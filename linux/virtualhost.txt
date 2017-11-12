@@ -1,0 +1,17 @@
+<VirtualHost *:80>
+    ServerAdmin user@mail.com
+    DocumentRoot /home/user/www/project.dev/
+    ServerName project.dev
+
+    SetEnv APPLICATION_ENV development
+
+    <Directory /home/user/www/project.dev/>
+        Options Indexes Includes FollowSymLinks
+        AllowOverride All
+        order allow,deny
+        allow from all
+    </Directory>
+
+    ErrorLog /home/user/www/project.dev/var/log/error.log
+    CustomLog /home/user/www/project.dev/var/log/access.log combined
+</VirtualHost>
