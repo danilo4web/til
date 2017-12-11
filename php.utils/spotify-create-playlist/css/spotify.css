@@ -1,0 +1,148 @@
+/* Motive */
+.abridor {
+  position: absolute;
+  top: 180px;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  background: url("../img/spotify/abridor.png") -100px 0 no-repeat;
+  background-size: 100%;
+}
+.motive {
+  width: 25%;
+  float: left;
+}
+.tampinha {
+  cursor: pointer;
+  background: url("../img/spotify/tampinha.png") center top no-repeat;
+  background-size: 120px;
+  color: #59524a;
+  padding-right: 18px;
+  margin-bottom: 20px;
+  .icon {
+    height: 110px;
+    display: inline-block;
+    img {
+      margin: 31px 0 0 3px;
+      height: 40px;
+      width: auto;
+    }
+  }
+  &.esquenta {
+    .icon {
+      img {
+        margin-top: 21px;
+        height: 60px;
+      }
+    }
+  }
+  &.active {
+    background: url("../img/spotify/tampinha-a.png") center top no-repeat;
+    background-size: 120px;
+  }
+  .title {
+    height: 25px;
+  }
+}
+
+/* Duration */
+.duration {
+  width: 25%;
+  float: left;
+}
+.page-duration .tampinha {
+  padding-right: 21px;
+  .icon img {
+    height: 50px;
+    margin: 26px -5px 0 0;
+  }
+}
+
+/* Playlist */
+.playlist {
+  background: url("../img/spotify/playlist.png") center top no-repeat;
+  padding: 30px 0 70px;
+  background-size: 100%;
+  margin: 0 -15px;
+}
+.playlist iframe {
+  width: 260px;
+  height: 320px;
+}
+.page-playlist .violao {
+  margin: -40px 0 -26px;
+  width: 280px;
+  height: auto;
+}
+.share {
+  position: relative;
+  z-index: 100;
+  margin-right: 10px;
+}
+.redo {
+  text-align: center;
+}
+.tampinha {
+  background-size: 110px;
+  background-position: center top;
+  margin-bottom: 10px;
+}
+.tampinha.active {
+  background-position: center top;
+  background: url(../img/spotify/tampinha-a.png) center top no-repeat;
+  background-size: 110px;
+}
+.tampinha .icon {
+  height: 100px;
+}
+.tampinha .icon img {
+  height: 38px;
+  margin: 28px 0 0 3px;
+}
+.tampinha.esquenta .icon img {
+  height: 52px;
+  margin-top: 19px;
+}
+.page-duration .tampinha .icon img {
+  height: 50px;
+  margin: 23px -7px 0 0;
+}
+.playlist {
+  background-size: 334px;
+}
+.playlist iframe {
+  height: 350px;
+}
+.page-playlist .violao {
+  width: 310px;
+}
+.short {
+  margin-bottom: -20px;
+}
+
+.centered {
+  text-align: center;
+}
+
+button {
+  display: inline-block;
+  height: 25px;
+  width: 240px;
+  color: #FFF;
+  background-color: #f73832;
+  font-size: 15px;
+  position: relative;
+  z-index: 2;
+  @include prefix(transition, webkit ms, color 0.4s, background-color 0.4s);
+  cursor:pointer;
+}
+button:hover {
+  background-color: #9e0b0f;
+  color: #fff;
+}
+
+
+#escolha-ritmo { display: none; }
+#escolha-duracao { display: none; }
+#escolha-duracao { display: none; }
+
