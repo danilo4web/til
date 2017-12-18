@@ -1,0 +1,49 @@
+# instalar o composer
+curl -sS https://getcomposer.org/installer | php
+mv composer.phar /usr/local/bin/composer
+
+composer require respect/validation
+composer require laravel/installer
+
+#criar projeto laravel
+composer create-project --prefer-dist laravel/laravel voluntariado
+
+#permissao
+chmod 777 /servidor/projetos/voluntariado/storage/* -Rfv
+
+IDE Helper
+composer require barryvdh/laravel-ide-helper
+
+Include in: config/app.php
+=================================
+providers:
+Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+Collective\Html\HtmlServiceProvider::class,
+
+aliases:
+'Form' => Collective\Html\FormFacade::class,
+'Html' => Collective\Html\HtmlFacade::class,
+=================================
+
+php artisan ide-helper:generate
+
+
+#criar controller
+php artisan make:controller ClientesController --resource
+
+
+#migrate
+php artisan migrate
+
+#rollback
+php artisan migrate:rollback
+
+#populate
+php artisan db:seed
+
+#populate just a table
+php artisan db:seed --class=CidadeTableSeeder
+
+#make auth
+php artisan make:auth
+
