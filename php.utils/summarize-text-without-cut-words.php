@@ -1,5 +1,9 @@
 <?php 
-	function summarize($text, $quantity, $simbol = '...') {
-		return str_reduce($text, $quantity) . ((strlen($text) > $quantity) ? " {$simbol}" : '');
+	function __summarize($text, $quantity, $simbol = '') {
+		if(strlen($text) > $quantity) {
+			$text = substr($text, 0, strrpos(substr($text, 0, $quantity), ' ')) . ' ' . $simbol;
+		}
+		
+		return $text;
 	}
 ?>
