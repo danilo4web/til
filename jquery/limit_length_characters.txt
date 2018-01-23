@@ -1,0 +1,16 @@
+<!-- HTML -->    
+<span class="caracteres">10</span> Restantes <br>
+<textarea id="TxtObservacoes"></textarea>
+        
+        
+<!-- JS -->      
+$(document).on("keydown", "#TxtObservacoes", function () {
+    var caracteresRestantes = 9;
+    var caracteresDigitados = parseInt($(this).val().length);
+    var caracteresRestantes = caracteresRestantes - caracteresDigitados;
+    
+    if(caracteresRestantes < 0) {
+    	return false;
+    }
+    $(".caracteres").text(caracteresRestantes);
+});
