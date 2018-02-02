@@ -1,0 +1,14 @@
+
+-- TERMINAL ----------------------------------------------------
+HISTTIMEFORMAT="%d/%m/%y %T "
+
+
+Or, to make the change permanent for the current user:
+
+-- TERMINAL ----------------------------------------------------
+echo 'export HISTTIMEFORMAT="%d/%m/%y %T "' >> ~/.bashrc
+source ~/.bashrc
+
+
+#Then
+history
