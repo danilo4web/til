@@ -1,0 +1,2 @@
+create table cb_homo.campaign_bkp2 like cb_homo.campaign;
+INSERT cb_homo.campaign_bkp2 SELECT * FROM cb_homo.campaign;
