@@ -1,0 +1,23 @@
+.overlay, .overlay-lista { 
+	position: relative; 
+	z-index 2; 
+	min-height: 150px; 
+}
+
+#listagem #modelo_carregando {
+    position: absolute;
+    display: none;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.65; 
+    filter: alpha(opacity=65);
+    background: #000;
+}
+
+#listagem #modelo_carregando img {
+    position: absolute;
+    text-align: center;
+}
