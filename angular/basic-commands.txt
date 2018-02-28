@@ -1,0 +1,12 @@
+
+# criar modulos
+ng g m module_name
+
+#criar components
+ng g c component_name
+
+#criar service
+ng g s service_nome
+
+# instalar bootstrap
+npm install ng2-bootstrap bootstrap --save
