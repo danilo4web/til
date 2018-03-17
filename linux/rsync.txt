@@ -1,0 +1,5 @@
+rsync -avzu /home/x /y
+rsync -avz -e "ssh -p 1157" --progress arquivo.tar.gz usuario@IP_SERVIDOR:/srv/www
+
+
+https://www.digitalocean.com/community/tutorials/how-to-copy-files-with-rsync-over-ssh
