@@ -1,0 +1,1 @@
+SELECT * FROM mytable ORDER BY FIELD(status, 'REVISAO', 'Approved', 'Rejected');
