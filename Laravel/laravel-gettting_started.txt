@@ -31,6 +31,9 @@ php artisan ide-helper:generate
 #criar controller
 php artisan make:controller ClientesController --resource
 
+#criar model e migration
+php artisan make:model Cliente --migration
+
 
 #migrate
 php artisan migrate
