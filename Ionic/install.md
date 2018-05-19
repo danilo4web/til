@@ -1,6 +1,12 @@
 #install node.js
 https://nodejs.org/en/ (download link)
 
+or
+
+#Ubuntu
+sudo apt-get install nodejs 
+sudo apt-get install npm
+
 #install Ionic 2
 npm install --g ionic
 ionic login
