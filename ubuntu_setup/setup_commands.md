@@ -24,11 +24,13 @@ sudo mkdir /servidor && sudo chown danilo:danilo /servidor && mkdir /servidor/lo
 # ionic
 npm install --g ionic && ionic login daniloborgespereira@gmail.com && chmod 755 /home/danilo/.ionic/config.json & npm install --g cordova
 
+# install ssh and github key
+sudo apt-get install ssh && ssh-keygen -t rsa -b 4096 -C "danilo4web@gmail.com" && ssh-add ~/.ssh/id_rsa && cat ~/.ssh/id_rsa.pub
 
-sudo apt-get install ssh && 
-cd /servidor/projetos/ && git clone https://github.com/danilo4web/til.git
+# Attention: Know, you need to update the pub key on github! #
 
-git clone https://github.com/danilo4web/ionic.git && git clone https://github.com/danilo4web/angular.git && git clone https://github.com/danilo4web/docker.git && git clone https://github.com/danilo4web/curso-docker.git && https://github.com/danilo4web/til.git
+# pull all projects
+cd /servidor/projetos/ && git clone https://github.com/danilo4web/til.git && git clone https://github.com/danilo4web/ionic.git && git clone https://github.com/danilo4web/angular.git && git clone https://github.com/danilo4web/docker.git && git clone https://github.com/danilo4web/curso-docker.git
 
 
 # spotify
