@@ -63,20 +63,60 @@
 			->setCellValueByColumnAndRow(17, $indice, $registro['TipoPlataforma']['descricao'])
 			->setCellValueByColumnAndRow(18, $indice, implode("/", $array_pagadores));
 		}
+
+
+
+
+
+
+
+
+		##### style for columns ( font / background ) ######
+		// $excel->getActiveSheet()
+		// 			->getStyle('A5:A10')->getFill()
+		// 			->setFillType(PHPExcel_Style_Fill::FILL_SOLID)
+		// 			->getStartColor()->setARGB('0b1a56');
+
+		// $excel->getActiveSheet()
+		// 			->getStyle('A5:A10')->applyFromArray($font_white);
+		#################################
+
+
+
+
+		######## include logo ##########
+		// $gdImage = imagecreatefromjpeg('img/logo_'.strtolower($empresa).'.jpg');
+
+		// $objDrawing = new PHPExcel_Worksheet_MemoryDrawing();
+		// $objDrawing->setName('Sample image');
+		// $objDrawing->setDescription('Sample image');
+		// $objDrawing->setImageResource($gdImage);
+		// $objDrawing->setRenderingFunction(PHPExcel_Worksheet_MemoryDrawing::RENDERING_JPEG);
+		// $objDrawing->setMimeType(PHPExcel_Worksheet_MemoryDrawing::MIMETYPE_DEFAULT);
+		// $objDrawing->setHeight(50);
+		// $objDrawing->setCoordinates('A1');
+		// $objDrawing->setWorksheet($excel->getActiveSheet());
+		###################################
+
+
+
+
+
+
 		
 		// Titulo Planilha
-		$excel->getActiveSheet()->setTitle('Controle de Contratos');
+		$excel->getActiveSheet()->setTitle('Control');
 		
 		// Cabeçalho do arquivo
 		header('Content-Type: application/vnd.ms-excel');
-		header('Content-Disposition: attachment;filename="controle_contratos_' . date('Y_m_d') . '.xls"');
+		header('Content-Disposition: attachment;filename="controle_contratos_' . date('Y_m_d') . '.xlsx"');
 		header('Cache-Control: max-age=0');
 		
 		// Se for o IE9, eh necessario
 		header('Cache-Control: max-age=1');
 		
 		// Acessamos o 'Writer' para poder salvar o arquivo
-		$objWriter = PHPExcel_IOFactory::createWriter($excel, 'Excel5');
+		$objWriter = PHPExcel_IOFactory::createWriter($excel, 'Excel2007');
 		
 		// Salva diretamente no output
 		$objWriter->save('php://output');
