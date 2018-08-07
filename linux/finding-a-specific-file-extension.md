@@ -6,3 +6,6 @@ find . -name "*.txt" -type f -delete
 
 # do any command for each file
 for i in *; do cat "$1"; done
+
+Interesting:
+https://www.hostinger.com.br/tutoriais/comandos-linux-find-e-locate/
