@@ -1,0 +1,12 @@
+tar xvf mongodb-osx-ssl-x86_64-4.0.6.tgz 
+sudo mv mongodb-osx-x86_64-4.0.6/ /usr/local/mongodb
+sudo mkdir -p /data/db
+sudo chown danilo /data/db
+open ~/.bash_profile 
+=================================
+export MONGO_PATH=/usr/local/mongodb/
+export PATH=$PATH:$MONGO_PATH/bin
+=================================
+source .bash_profile 
+mongod
+mongo
