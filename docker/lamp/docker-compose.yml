@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  apache:
+    build:
+      dockerfile: Dockerfile
+      context: .
+    container_name: jobs
+    restart: always
+    ports:
+      - '8001:80'
+    volumes:
+      - $PWD:/var/www/graficajobs/
