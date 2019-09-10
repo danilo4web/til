@@ -1,0 +1,3 @@
+jQuery( "input[type=checkbox]" ).each(function() {
+	jQuery(this).attr('checked', 'true');
+})
